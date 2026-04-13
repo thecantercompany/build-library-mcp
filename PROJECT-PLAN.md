@@ -1,4 +1,4 @@
-# Build Library MCP — Project Plan
+# Website Build Ideas — Project Plan
 
 ## Overview
 
@@ -37,7 +37,7 @@ Single `bookmarks` table with GIN indexes for tags and full-text search.
 ## Infrastructure
 
 - **GitHub:** `thecantercompany/build-library-mcp`
-- **Railway project:** Build Library MCP
+- **Railway project:** Website Build Ideas
 - **URL:** `https://build-library-mcp-production.up.railway.app`
 - **MCP endpoint:** `/mcp`
 - **Health check:** `/health`

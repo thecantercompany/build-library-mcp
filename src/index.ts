@@ -50,7 +50,7 @@ async function startHttpServer(): Promise<void> {
   app.get("/health", (_req, res) => {
     res.json({
       status: "ok",
-      name: "build-library-mcp",
+      name: "website-build-ideas",
       version: "1.0.0",
     });
   });

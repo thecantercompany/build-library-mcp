@@ -1,11 +1,11 @@
-# Build Library MCP — Project Status
+# Website Build Ideas — Project Status
 
 ## Current Status
 
 **Phase:** Deployed
 **Last Updated:** April 12, 2026
 
-The Build Library MCP server is live on Railway with PostgreSQL storage. All 7 tools are working. The Hut 8 entry from the old `websites-ideas.md` file has been migrated.
+The Website Build Ideas server is live on Railway with PostgreSQL storage. All 7 tools are working. The Hut 8 entry from the old `websites-ideas.md` file has been migrated.
 
 ## Infrastructure
 
