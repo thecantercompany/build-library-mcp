@@ -55,6 +55,18 @@ async function startHttpServer(): Promise<void> {
     });
   });
 
+  // Bearer token auth middleware for /mcp
+  const authToken = process.env.AUTH_TOKEN;
+  app.use("/mcp", (req, res, next) => {
+    if (!authToken) return next(); // skip auth if no token configured
+    const header = req.headers.authorization;
+    if (!header || header !== `Bearer ${authToken}`) {
+      res.status(401).json({ error: "Unauthorized" });
+      return;
+    }
+    next();
+  });
+
   // Streamable HTTP endpoint
   app.all("/mcp", async (req, res) => {
     console.error(`Streamable HTTP ${req.method} from ${req.ip}`);
