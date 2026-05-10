@@ -1,5 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
+import { reportError } from "canter-error-reporter";
 import type { DatabaseClient } from "../db/client.js";
 import type { Bookmark } from "../types/index.js";
 
@@ -52,6 +53,12 @@ export function registerSearchTools(server: McpServer, db: DatabaseClient): void
           ],
         };
       } catch (error) {
+        reportError({
+          project: "website-build-ideas",
+          category: "tool_error",
+          message: error instanceof Error ? error.message : String(error),
+          rawError: error,
+        });
         return {
           isError: true,
           content: [
@@ -99,6 +106,12 @@ export function registerSearchTools(server: McpServer, db: DatabaseClient): void
           ],
         };
       } catch (error) {
+        reportError({
+          project: "website-build-ideas",
+          category: "tool_error",
+          message: error instanceof Error ? error.message : String(error),
+          rawError: error,
+        });
         return {
           isError: true,
           content: [
@@ -144,6 +157,12 @@ export function registerSearchTools(server: McpServer, db: DatabaseClient): void
           ],
         };
       } catch (error) {
+        reportError({
+          project: "website-build-ideas",
+          category: "tool_error",
+          message: error instanceof Error ? error.message : String(error),
+          rawError: error,
+        });
         return {
           isError: true,
           content: [
